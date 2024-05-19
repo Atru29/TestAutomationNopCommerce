@@ -21,5 +21,5 @@ Feature: Registro de Cuenta en la web NopCommerce
     And valida se que ecuentra en la pagina principal "<mensajePaginaPrincipal>"
     And valida la opcion My Account "<mensajeMyAccount>"
     Examples:
-      | nombre      | apellido     | day | month | year | email         | nombreCompania | password | rePassword | mensajeRegistro             | mensajePaginaPrincipal | mensajeMyAccount |
-      | Juan Arturo | Rojas Olarte | 1   | July  | 2000 | juan@mail.com | AtruCompany    | 123456   | 123456     | Your registration completed | Welcome to our store   | My account       |
+      | nombre      | apellido     | day | month | year | email              | nombreCompania | password | rePassword | mensajeRegistro             | mensajePaginaPrincipal | mensajeMyAccount |
+      | Juan Arturo | Rojas Olarte | 1   | July  | 2000 | rojas1235@mail.com | AtruCompany    | 123456   | 123456     | Your registration completed | Welcome to our store   | My account       |

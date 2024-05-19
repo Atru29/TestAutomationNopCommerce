@@ -17,4 +17,5 @@ public class RegisterPage {
    public static By inputPassword= By.xpath("//input[@id='Password']");
    public static By inputRepassword= By.xpath("//input[@id='ConfirmPassword']");
    public static By btnLogin= By.xpath("//button[@id='register-button']");
+   public static By textConfirmacion = By.xpath("//div[@class='result']");
 }

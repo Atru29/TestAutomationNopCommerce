@@ -71,8 +71,8 @@ public class RegisterStepDef extends Base {
     }
 
     @Then("se valida el mensaje de confirmacion {string}")
-    public void se_valida_el_mensaje_de_confirmacion(String string) {
-
+    public void se_valida_el_mensaje_de_confirmacion(String mensajeConfirmacion) {
+        registerStep.validarMensajeConfirmacion(mensajeConfirmacion);
     }
 
     @And("el usuario es redirigio a la pagina principal")
@@ -81,12 +81,12 @@ public class RegisterStepDef extends Base {
     }
 
     @And("valida se que ecuentra en la pagina principal {string}")
-    public void valida_se_que_ecuentra_en_la_pagina_principal(String string) {
+    public void valida_se_que_ecuentra_en_la_pagina_principal(String mensajePaginaPrincipal) {
 
     }
 
     @And("valida la opcion My Account {string}")
-    public void valida_la_opcion_my_account(String string) {
+    public void valida_la_opcion_my_account(String mensajeMyAccount) {
 
     }
 

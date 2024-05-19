@@ -4,7 +4,12 @@ import com.nopcommerce.page.RegisterPage;
 import com.nopcommerce.utils.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Date;
 
@@ -49,24 +54,25 @@ public class RegisterStep extends Base {
     }
 
     public void typeBirthdate(String day, String month, String year) {
-        selectDate(RegisterPage.selectDay,day);
-        selectDate(RegisterPage.selectMonth,month);
-        selectDate(RegisterPage.selectYear,year);
+        selectDate(RegisterPage.selectDay, day);
+        selectDate(RegisterPage.selectMonth, month);
+        selectDate(RegisterPage.selectYear, year);
     }
+
     public void typeEmail(String email) {
-        type(RegisterPage.inputEmail,email);
+        type(RegisterPage.inputEmail, email);
     }
 
     public void typeNameCompany(String nameCompania) {
-        type(RegisterPage.inputNameCompany,nameCompania);
+        type(RegisterPage.inputNameCompany, nameCompania);
     }
 
     public void typePassword(String password) {
-        type(RegisterPage.inputPassword,password);
+        type(RegisterPage.inputPassword, password);
     }
 
     public void typeRepassword(String repassword) {
-        type(RegisterPage.inputRepassword,repassword);
+        type(RegisterPage.inputRepassword, repassword);
     }
 
     public void clicBotonRegistrar() {
@@ -74,4 +80,9 @@ public class RegisterStep extends Base {
     }
 
 
+    public void validarMensajeConfirmacion(String mensajeConfirmacion) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(RegisterPage.textConfirmacion));
+        String mensaje = find(RegisterPage.textConfirmacion).getText();
+        assertEquals(mensaje, mensajeConfirmacion,"El mensaje de confirmacion de Registro dela cuenta no coinciden");
+    }
 }
