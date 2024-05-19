@@ -2,7 +2,7 @@ Feature: Registro de Cuenta en la web NopCommerce
   Como usuario
   Quiero registrar mi cuenta
   Para acceder a las funciones del sistema NopCommerce
-
+@RegistroConCredencialesValidas
   Scenario Outline: Registro con credenciales validas
     Given el usuario se encuentra en la pagina principal "https://demo.nopcommerce.com/"
     And el usuario hace clic en Register
@@ -14,7 +14,7 @@ Feature: Registro de Cuenta en la web NopCommerce
     And el usuario ingresa el nombre de su compania "<nombreCompania>"
     And el usuario ingresa una contrasena "<password>"
     And el usuario confirma su contrasena "<rePassword>"
-    And el usuario hace clic en Register
+    And el usuario hace clic en el boton Register
     Then se valida el mensaje de confirmacion "<mensajeRegistro>"
     And el usuario es redirigio a la pagina principal
     And valida se que ecuentra en la pagina principal "<mensajePaginaPrincipal>"
