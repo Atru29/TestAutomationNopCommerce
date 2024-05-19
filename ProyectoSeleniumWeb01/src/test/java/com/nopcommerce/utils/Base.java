@@ -1,4 +1,4 @@
-package com.nopcommerce.uitls;
+package com.nopcommerce.utils;
 
 import org.openqa.selenium.WebDriver;
 

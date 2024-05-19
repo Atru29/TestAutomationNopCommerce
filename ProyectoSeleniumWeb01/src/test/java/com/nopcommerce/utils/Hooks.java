@@ -1,7 +1,8 @@
-package com.nopcommerce.uitls;
+package com.nopcommerce.utils;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
@@ -14,8 +15,15 @@ public class Hooks extends Base {
         driver.manage().window().maximize();
     }
 
+
     @After
     public void tearDown() {
-        driver.quit();
+        if (driver != null) {
+           // driver.quit();
+        }
+    }
+    public WebDriver getDriver() {
+        return driver;
+
     }
 }
