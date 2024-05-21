@@ -22,4 +22,4 @@ Feature: Registro de Cuenta en la web NopCommerce
     And valida la opcion My Account "<mensajeMyAccount>"
     Examples:
       | nombre      | apellido     | day | month | year | email           | nombreCompania | password | rePassword | mensajeRegistro             | mensajePaginaPrincipal | mensajeMyAccount |
-      | Juan Arturo | Rojas Olarte | 1   | July  | 2000 | rojas03@mail.com | AtruCompany    | 123456   | 123456     | Your registration completed | Welcome to our store   | My account       |
+      | Juan Arturo | Rojas Olarte | 1   | July  | 2000 | rojas12@mail.com | AtruCompany    | 123456   | 123456     | Your registration completed | Welcome to our store   | My account       |

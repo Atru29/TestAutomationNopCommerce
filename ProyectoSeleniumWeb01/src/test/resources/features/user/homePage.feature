@@ -1,4 +1,5 @@
 Feature: Navegacion a la Pagina Principal
+
   Como usuario
   Quiero acceder a las opciones de Registro e Inicio de Sesión desde la página principal
   Para poder crear una nueva cuenta o iniciar sesión en mi cuenta existente

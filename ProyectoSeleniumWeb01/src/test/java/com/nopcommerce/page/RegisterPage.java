@@ -18,4 +18,7 @@ public class RegisterPage {
    public static By btnLogin= By.xpath("//button[@id='register-button']");
    public static By textConfirmacion = By.xpath("//div[@class='result']");
    public static By btnContinuar = By.xpath("//a[@class='button-1 register-continue-button']");
+   public static By textRegister = By.xpath("");
+   public static By textPersonalDetails = By.xpath("");
+
 }

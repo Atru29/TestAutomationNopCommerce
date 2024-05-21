@@ -1,10 +1,14 @@
 package com.nopcommerce.step;
 
+import com.nopcommerce.page.RegisterPage;
 import com.nopcommerce.utils.Base;
 import com.nopcommerce.page.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoginStep extends Base {
     /*
@@ -45,5 +49,15 @@ public class LoginStep extends Base {
 
     public void clicRemenberMe() {
         clic(LoginPage.inputCheckBoxRemenberMe);
+    }
+    public void validartextLogIn(String textWelconLogin) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(LoginPage.textWelconLogin));
+        String mensaje = getText(LoginPage.textWelconLogin);
+        assertEquals(mensaje, textWelconLogin);
+    }
+    public void validartextReturnCustomer(String textReturnCustomer) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(LoginPage.textReturnCustomer));
+        String mensaje = getText(LoginPage.textReturnCustomer);
+        assertEquals(mensaje, textReturnCustomer);
     }
 }

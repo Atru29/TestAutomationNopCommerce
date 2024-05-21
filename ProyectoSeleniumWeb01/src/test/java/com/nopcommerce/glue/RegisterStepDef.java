@@ -17,16 +17,9 @@ public class RegisterStepDef extends Base {
         registerStep = new RegisterStep();
         homeStep = new HomeStep();
     }
-
-    @Given("el usuario se encuentra en la pagina principal {string}")
-    public void el_usuario_se_encuentra_en_la_pagina_principal(String url) {
-        driver.get(url);
-    }
-
-    @And("el usuario hace clic en Register")
-    public void el_usuario_hace_clic_en_register() {
-        homeStep.clicLinkRegister();
-    }
+    /*
+    * Escenario de Registro de Cuenta
+    * */
 
     @When("el usuario selecciona su genero")
     public void el_usuario_selecciona_su_genero() {

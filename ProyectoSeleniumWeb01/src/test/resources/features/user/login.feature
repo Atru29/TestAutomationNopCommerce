@@ -15,4 +15,4 @@ Feature: Iniciio de Sesion en la web NopCommerce
     And valida la opcion My Account "<mensajeMyAccount>"
     Examples:
       | email            | password | mensajePaginaPrincipal | mensajeMyAccount |
-      | rojas02@mail.com | 123456   | Welcome to our store   | My account       |
+      | rojas12@mail.com | 123456   | Welcome to our store   | My account       |

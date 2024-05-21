@@ -11,6 +11,6 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber/cucumber.json"},
         features = "src/test/resources/features",
         glue = {"com.nopcommerce.glue", "com.nopcommerce.utils"},
-        tags = "@RegistroConCredencialesValidas")
+        tags = "@LogInConCredencialesValidas")
 public class TestRunner {
 }
