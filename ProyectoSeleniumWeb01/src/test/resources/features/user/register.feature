@@ -17,9 +17,9 @@ Feature: Registro de Cuenta en la web NopCommerce
     And el usuario confirma su contrasena "<rePassword>"
     And el usuario hace clic en el boton Register
     Then se valida el mensaje de confirmacion "<mensajeRegistro>"
-    And el usuario es redirigio a la pagina principal
+    And el usuario hace clic en continuar
     And valida se que ecuentra en la pagina principal "<mensajePaginaPrincipal>"
     And valida la opcion My Account "<mensajeMyAccount>"
     Examples:
-      | nombre      | apellido     | day | month | year | email              | nombreCompania | password | rePassword | mensajeRegistro             | mensajePaginaPrincipal | mensajeMyAccount |
-      | Juan Arturo | Rojas Olarte | 1   | July  | 2000 | rojas1235@mail.com | AtruCompany    | 123456   | 123456     | Your registration completed | Welcome to our store   | My account       |
+      | nombre      | apellido     | day | month | year | email           | nombreCompania | password | rePassword | mensajeRegistro             | mensajePaginaPrincipal | mensajeMyAccount |
+      | Juan Arturo | Rojas Olarte | 1   | July  | 2000 | rojas02@mail.com | AtruCompany    | 123456   | 123456     | Your registration completed | Welcome to our store   | My account       |

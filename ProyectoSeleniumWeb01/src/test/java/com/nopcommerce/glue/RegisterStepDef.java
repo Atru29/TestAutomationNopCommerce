@@ -75,18 +75,19 @@ public class RegisterStepDef extends Base {
         registerStep.validarMensajeConfirmacion(mensajeConfirmacion);
     }
 
-    @And("el usuario es redirigio a la pagina principal")
-    public void el_usuario_es_redirigio_a_la_pagina_principal() {
-
+    @And("el usuario hace clic en continuar")
+    public void elUsuarioHaceClicEnContinuar() {
+        registerStep.clicContinuar();
     }
 
     @And("valida se que ecuentra en la pagina principal {string}")
     public void valida_se_que_ecuentra_en_la_pagina_principal(String mensajePaginaPrincipal) {
-
+        registerStep.validarMensajePaginaPrincipal(mensajePaginaPrincipal);
     }
 
     @And("valida la opcion My Account {string}")
     public void valida_la_opcion_my_account(String mensajeMyAccount) {
+        registerStep.validarOpcionMyAccount(mensajeMyAccount);
 
     }
 

@@ -18,4 +18,7 @@ public class RegisterPage {
    public static By inputRepassword= By.xpath("//input[@id='ConfirmPassword']");
    public static By btnLogin= By.xpath("//button[@id='register-button']");
    public static By textConfirmacion = By.xpath("//div[@class='result']");
+   public static By btnContinuar = By.xpath("//a[@class='button-1 register-continue-button']");
+   public static By textMessageHomePage= By.xpath("//div[@class='topic-block-title']//h2");
+   public static By linkMyAccount = By.xpath("//a[@href='/customer/info' and contains(@class, 'ico-account')]");
 }

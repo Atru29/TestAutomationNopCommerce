@@ -4,14 +4,11 @@ import com.nopcommerce.page.RegisterPage;
 import com.nopcommerce.utils.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.Date;
 
 public class RegisterStep extends Base {
     /*
@@ -33,7 +30,9 @@ public class RegisterStep extends Base {
         Select date = new Select(find(element));
         date.selectByVisibleText(dateText);
     }
-
+    public String getText(By element) {
+        return find(element).getText();
+    }
     /*
      * Metodos
      * */
@@ -82,7 +81,25 @@ public class RegisterStep extends Base {
 
     public void validarMensajeConfirmacion(String mensajeConfirmacion) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(RegisterPage.textConfirmacion));
-        String mensaje = find(RegisterPage.textConfirmacion).getText();
-        assertEquals(mensaje, mensajeConfirmacion,"El mensaje de confirmacion de Registro dela cuenta no coinciden");
+        String mensaje = getText(RegisterPage.textConfirmacion);
+        assertEquals(mensaje, mensajeConfirmacion, "El mensaje de confirmacion de Registro dela cuenta no coinciden");
+    }
+
+    public void clicContinuar() {
+        clic(RegisterPage.btnContinuar);
+    }
+
+    public void validarMensajePaginaPrincipal(String mensajePaginaPrincipal) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(RegisterPage.textMessageHomePage));
+        String mensaje= getText(RegisterPage.textMessageHomePage);
+        assertEquals(mensaje, mensajePaginaPrincipal, "El titulo de la Home Page no coinciden");
+
+    }
+
+    public void validarOpcionMyAccount(String mensajeMyAccount) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(RegisterPage.linkMyAccount));
+        String mensaje= getText(RegisterPage.linkMyAccount);
+        assertEquals(mensaje,mensajeMyAccount,"El text de la opcion My Account No cocinciden");
+
     }
 }

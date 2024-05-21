@@ -15,18 +15,15 @@ public class Hooks extends Base {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIME_OUT));
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(TIME_OUT));
-
     }
-
 
     @After
     public void tearDown() {
         if (driver != null) {
-           // driver.quit();
+           driver.quit();
         }
     }
     public WebDriver getDriver() {
         return driver;
-
     }
 }
