@@ -73,14 +73,19 @@ public class RegisterStep extends Base {
     public void clicBotonRegistrar() {
         clic(RegisterPage.btnLogin);
     }
+    public void clicContinuar() {
+        clic(RegisterPage.btnContinuar);
+    }
 
-
+    /*
+    * Validaciones
+    * */
     public void validarMensajeConfirmacion(String mensajeConfirmacion) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(RegisterPage.textConfirmacion));
         String mensaje = getText(RegisterPage.textConfirmacion);
         assertEquals(mensaje, mensajeConfirmacion, "El mensaje de confirmacion de Registro dela cuenta no coinciden");
     }
-    public void validartextRegister(String textRegister) {
+    public void validarTextRegister(String textRegister) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(RegisterPage.textRegister));
         String mensaje = getText(RegisterPage.textRegister);
         assertEquals(mensaje, textRegister);
@@ -90,8 +95,6 @@ public class RegisterStep extends Base {
         String mensaje = getText(RegisterPage.textPersonalDetails);
         assertEquals(mensaje, textPersonalDetails);
     }
-    public void clicContinuar() {
-        clic(RegisterPage.btnContinuar);
-    }
+
 
 }

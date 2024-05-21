@@ -21,10 +21,7 @@ public class HomeStepDef extends Base {
     public void el_usuario_se_encuentra_en_la_pagina_principal(String url) {
         driver.get(url);
     }
-    @And("el usuario hace clic en Register")
-    public void el_usuario_hace_clic_en_register() {
-        homeStep.clicLinkRegister();
-    }
+
     @And("el usuario hace clic en Log In")
     public void elUsuarioHaceClicEnLogIn() {
         homeStep.clicLogIn();
@@ -32,18 +29,22 @@ public class HomeStepDef extends Base {
 
     @Then("valida que se encuentre en el Log In {string}")
     public void validaQueSeEncuentreEnElLogIn(String textLogin) {
-            loginStep.validartextLogIn(textLogin);
+            loginStep.validarTextLogIn(textLogin);
     }
-
     /*
     * Escenario Navegar a Register
     * */
+    @And("el usuario hace clic en Register")
+    public void el_usuario_hace_clic_en_register() {
+        homeStep.clicLinkRegister();
+    }
     @Then("valida que se encuentre en el Register {string}")
     public void validaQueSeEncuentreEnElRegister(String mensajeRegister) {
-
+        registerStep.validarTextRegister(mensajeRegister);
     }
 
     @And("valida qe este en la seccion Tus datos personales {string}")
     public void validaQeEsteEnLaSeccionTusDatosPersonales(String mensajePersonalDetails) {
+        registerStep.validartextPersonalDetails(mensajePersonalDetails);
     }
 }

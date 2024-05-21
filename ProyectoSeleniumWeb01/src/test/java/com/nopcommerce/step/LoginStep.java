@@ -1,6 +1,5 @@
 package com.nopcommerce.step;
 
-import com.nopcommerce.page.RegisterPage;
 import com.nopcommerce.utils.Base;
 import com.nopcommerce.page.LoginPage;
 import org.openqa.selenium.By;
@@ -50,7 +49,8 @@ public class LoginStep extends Base {
     public void clicRemenberMe() {
         clic(LoginPage.inputCheckBoxRemenberMe);
     }
-    public void validartextLogIn(String textWelconLogin) {
+
+    public void validarTextLogIn(String textWelconLogin) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(LoginPage.textWelconLogin));
         String mensaje = getText(LoginPage.textWelconLogin);
         assertEquals(mensaje, textWelconLogin);
