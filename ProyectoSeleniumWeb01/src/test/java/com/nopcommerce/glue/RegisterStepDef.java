@@ -1,5 +1,6 @@
 package com.nopcommerce.glue;
 
+import com.nopcommerce.step.HomeStep;
 import com.nopcommerce.step.RegisterStep;
 import com.nopcommerce.utils.Base;
 import com.nopcommerce.utils.Hooks;
@@ -10,9 +11,11 @@ import io.cucumber.java.en.When;
 
 public class RegisterStepDef extends Base {
     protected RegisterStep registerStep;
+    protected HomeStep homeStep;
 
     public RegisterStepDef() {
         registerStep = new RegisterStep();
+        homeStep = new HomeStep();
     }
 
     @Given("el usuario se encuentra en la pagina principal {string}")
@@ -22,7 +25,7 @@ public class RegisterStepDef extends Base {
 
     @And("el usuario hace clic en Register")
     public void el_usuario_hace_clic_en_register() {
-        registerStep.clicLinkRegister();
+        homeStep.clicLinkRegister();
     }
 
     @When("el usuario selecciona su genero")
@@ -42,7 +45,7 @@ public class RegisterStepDef extends Base {
 
     @And("el usuario ingresa su fecha de nacimiento su dia {string} , el mes {string} y el anio {string}")
     public void elUsuarioIngresaSuFechaDeNacimientoSuDiaElMesYElAnio(String day, String month, String year) {
-        registerStep.typeBirthdate(day,month,year);
+        registerStep.typeBirthdate(day, month, year);
     }
 
     @And("el uusario ingresa su direccion de correo electronico {string}")
@@ -82,15 +85,14 @@ public class RegisterStepDef extends Base {
 
     @And("valida se que ecuentra en la pagina principal {string}")
     public void valida_se_que_ecuentra_en_la_pagina_principal(String mensajePaginaPrincipal) {
-        registerStep.validarMensajePaginaPrincipal(mensajePaginaPrincipal);
+        homeStep.validarMensajePaginaPrincipal(mensajePaginaPrincipal);
     }
 
     @And("valida la opcion My Account {string}")
     public void valida_la_opcion_my_account(String mensajeMyAccount) {
-        registerStep.validarOpcionMyAccount(mensajeMyAccount);
+        homeStep.validarOpcionMyAccount(mensajeMyAccount);
 
     }
-
 
 
 }

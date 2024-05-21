@@ -31,10 +31,6 @@ public class LoginStep extends Base {
     /*
      * Metodos
      * */
-    public void clicLogIn() {
-        clic(LoginPage.linkLogIn);
-    }
-
     public void typeEmail(String email) {
         type(LoginPage.inputEmail,email);
     }

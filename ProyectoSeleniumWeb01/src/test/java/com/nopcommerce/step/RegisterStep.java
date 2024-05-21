@@ -36,10 +36,6 @@ public class RegisterStep extends Base {
     /*
      * Metodos
      * */
-    public void clicLinkRegister() {
-        clic(RegisterPage.linkRegister);
-    }
-
     public void typeFirstName(String firstName) {
         type(RegisterPage.inputFirstName, firstName);
     }
@@ -89,17 +85,4 @@ public class RegisterStep extends Base {
         clic(RegisterPage.btnContinuar);
     }
 
-    public void validarMensajePaginaPrincipal(String mensajePaginaPrincipal) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(RegisterPage.textMessageHomePage));
-        String mensaje= getText(RegisterPage.textMessageHomePage);
-        assertEquals(mensaje, mensajePaginaPrincipal, "El titulo de la Home Page no coinciden");
-
-    }
-
-    public void validarOpcionMyAccount(String mensajeMyAccount) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(RegisterPage.linkMyAccount));
-        String mensaje= getText(RegisterPage.linkMyAccount);
-        assertEquals(mensaje,mensajeMyAccount,"El text de la opcion My Account No cocinciden");
-
-    }
 }

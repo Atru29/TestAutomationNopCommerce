@@ -1,18 +1,21 @@
 package com.nopcommerce.glue;
 
+import com.nopcommerce.step.HomeStep;
 import com.nopcommerce.step.LoginStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 
 public class LoginStepDef {
     protected LoginStep loginStep;
+    protected HomeStep homeStep;
 
     public LoginStepDef(){
         loginStep = new LoginStep();
+        homeStep = new HomeStep();
     }
     @And("el usuario hace clic en Log In")
     public void elUsuarioHaceClicEnLogIn() {
-        loginStep.clicLogIn();
+        homeStep.clicLogIn();
     }
     @When("el usuario ingresa su direccion de correo electrinico {string}")
     public void elUsuarioIngresaSuDireccionDeCorreoElectrinico(String email) {

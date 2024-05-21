@@ -11,7 +11,7 @@ Feature: Iniciio de Sesion en la web NopCommerce
     And el usuario ingresa su password "<password>"
     And el usuario hace clic en Remenber Me
     And el usuario hace clic en el boton Log In
-    And valida se que ecuentra en la pagina principal "<mensajePaginaPrincipal>"
+    Then valida se que ecuentra en la pagina principal "<mensajePaginaPrincipal>"
     And valida la opcion My Account "<mensajeMyAccount>"
     Examples:
       | email            | password | mensajePaginaPrincipal | mensajeMyAccount |

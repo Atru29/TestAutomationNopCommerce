@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class RegisterPage {
-   public static By linkRegister = By.xpath("//a[text()='Register']");
    public static By inputFirstName = By.xpath("//input[@id='FirstName']");
    public static By inputLastName = By.xpath("//input[@id='LastName']");
    public static By inputGenereMale= By.xpath("//input[@id='gender-male']");
@@ -19,6 +18,4 @@ public class RegisterPage {
    public static By btnLogin= By.xpath("//button[@id='register-button']");
    public static By textConfirmacion = By.xpath("//div[@class='result']");
    public static By btnContinuar = By.xpath("//a[@class='button-1 register-continue-button']");
-   public static By textMessageHomePage= By.xpath("//div[@class='topic-block-title']//h2");
-   public static By linkMyAccount = By.xpath("//a[@href='/customer/info' and contains(@class, 'ico-account')]");
 }
