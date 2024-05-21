@@ -17,7 +17,7 @@ Feature: Navegacion a la Pagina Principal
   @NavegarARegister
   Scenario Outline: Pagina Principal
     Given el usuario se encuentra en la pagina principal "https://demo.nopcommerce.com/"
-    When el usuario hace clic en Log In
+    When el usuario hace clic en Register
     Then valida que se encuentre en el Register "<mensajeRegister>"
     And valida qe este en la seccion Tus datos personales "<mensajePersonalDetails>"
 

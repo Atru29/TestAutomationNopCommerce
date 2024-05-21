@@ -6,6 +6,7 @@ import com.nopcommerce.step.RegisterStep;
 import com.nopcommerce.utils.Base;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 
 public class HomeStepDef extends Base {
     protected LoginStep loginStep;
@@ -27,5 +28,22 @@ public class HomeStepDef extends Base {
     @And("el usuario hace clic en Log In")
     public void elUsuarioHaceClicEnLogIn() {
         homeStep.clicLogIn();
+    }
+
+    @Then("valida que se encuentre en el Log In {string}")
+    public void validaQueSeEncuentreEnElLogIn(String textLogin) {
+            loginStep.validartextLogIn(textLogin);
+    }
+
+    /*
+    * Escenario Navegar a Register
+    * */
+    @Then("valida que se encuentre en el Register {string}")
+    public void validaQueSeEncuentreEnElRegister(String mensajeRegister) {
+
+    }
+
+    @And("valida qe este en la seccion Tus datos personales {string}")
+    public void validaQeEsteEnLaSeccionTusDatosPersonales(String mensajePersonalDetails) {
     }
 }
