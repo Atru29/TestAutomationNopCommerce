@@ -17,7 +17,7 @@ Feature: Operaciones en la web NopCommerce
     When el usuario hace clic en el boton Computers
     And el usuario hace clic en Dekstops
     And el usuario ordena por precio mas bajo
-    And el usuario muestra 9 productos por busqueda
+    And el usuario selecciona la cantidad de productos en el catalago
     And el usuario hace clic en agregar al carrito
     Then se valida el mensaje de confirmacion del producto argegado al carrito "<mensajeAddCarrito>"
     And el usuario hace clic en Shopping Cart
