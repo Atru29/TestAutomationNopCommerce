@@ -7,7 +7,7 @@ Feature: Iniciio de Sesion en la web NopCommerce
   Scenario Outline: Iniciar sesion con credenciales validas
     Given el usuario se encuentra en la pagina principal "https://demo.nopcommerce.com/"
     And el usuario hace clic en Log In
-    When el usuario ingresa su direccion de correo electrinico "<email>"
+    When el usuario ingresa su direccion de correo electronico "<email>"
     And el usuario ingresa su password "<password>"
     And el usuario hace clic en Remenber Me
     And el usuario hace clic en el boton Log In
