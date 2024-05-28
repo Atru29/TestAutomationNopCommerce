@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = {"com.nopcommerce.glue", "com.nopcommerce.utils"},
-        tags = "@RegistroConCredencialesValidas",
+        tags = "@AgregarProductoAlCarrito",
         monochrome = false,
         dryRun = false,
         publish = true)

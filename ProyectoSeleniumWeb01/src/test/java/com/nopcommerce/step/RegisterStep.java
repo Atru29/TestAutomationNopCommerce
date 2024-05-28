@@ -14,8 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RegisterStep extends Base {
     private static final Logger logger = LogManager.getLogger(RegisterStep.class);
-
-
     /*
      * Metodos Reutilizables
      * */

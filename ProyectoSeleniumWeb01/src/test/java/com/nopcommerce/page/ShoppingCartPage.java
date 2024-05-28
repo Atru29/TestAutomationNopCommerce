@@ -1,4 +1,8 @@
 package com.nopcommerce.page;
 
-public class ShoppingCartPage {
+import com.nopcommerce.utils.Base;
+
+public class ShoppingCartPage extends Base {
+    public void validarProductoEnElCarrito() {
+    }
 }
