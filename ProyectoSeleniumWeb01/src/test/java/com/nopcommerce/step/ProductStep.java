@@ -57,7 +57,6 @@ public class ProductStep extends Base {
     public void clicAgregarAlCarrito() {
         clic(ProductPage.btnAddToCart);
     }
-
     public void validarMensajeAgregarCarritoExitoso(String mensajeConfirmacion) {
     }
 
